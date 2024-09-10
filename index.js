@@ -3,7 +3,7 @@ const app = express()
 const fs = require('fs')
 const parser=require("body-parser")
 app.use(parser.json())
-const port=3000
+const port = process.env.PORT || 4000;
 
 let now = Date.now();
 
