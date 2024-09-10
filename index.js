@@ -26,7 +26,7 @@ app.get('/get',function(req,res){
     res.json(timestamp)
 })
 
-app.listen(port,"localhost",()=>
+app.listen(port,()=>
 {
     console.log("server created")
 })
