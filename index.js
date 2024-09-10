@@ -22,11 +22,17 @@ fs.writeFile(`./times/${ts}.txt`,`${timestamp}`,(err) => {
     console.log('File Created successfully')
 
 })
-app.get('/get',function(req,res){
-    res.json(timestamp)
-})
 
 app.listen(port,()=>
 {
     console.log("server created")
 })
+
+var router = express.Router();
+
+   var route=router.get('/', function(req, res) {
+    res.json(timestamp)
+});
+
+
+app.use('',route)
